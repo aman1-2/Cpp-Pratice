@@ -26,28 +26,3 @@ void inorderTraversal(Node* root) {
     inorderTraversal(root->rightPtr);
 }
 
-int main() {
-    Node* root = new Node(1);
-    root->leftPtr = new Node(2);
-    root->rightPtr = new Node(3);
-    root->leftPtr->leftPtr = new Node(4);
-    root->leftPtr->rightPtr = new Node(5);
-    root->rightPtr->leftPtr = NULL;
-    root->rightPtr->rightPtr = new Node(6);
-    root->rightPtr->rightPtr->leftPtr = NULL;
-    root->rightPtr->rightPtr->rightPtr = NULL;
-    root->leftPtr->leftPtr->rightPtr = NULL;
-    root->leftPtr->rightPtr->leftPtr = NULL;
-    root->leftPtr->rightPtr->rightPtr = NULL;
-
-    inorderTraversal(root);
-
-    return 0;
-}
-
-/*
-            1
-        2       3
-    4      5 N     6
-N      N N  N   N     N
-*/
